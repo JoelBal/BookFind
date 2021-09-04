@@ -1,0 +1,29 @@
+{
+  "name": "BookFind",
+  "version": "1.0.0",
+  "description": "## Your Task",
+  "main": "index.js",
+  "dependencies": {
+    "apollo-server": "^3.3.0",
+    "apollo-server-express": "^3.3.0",
+    "core-js": "^3.17.1",
+    "express-graphql": "^0.12.0",
+    "graphql": "^15.5.2",
+    "graphql-cli": "^4.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoelBal/BookFind.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoelBal/BookFind/issues"
+  },
+  "homepage": "https://github.com/JoelBal/BookFind#readme"
+}
