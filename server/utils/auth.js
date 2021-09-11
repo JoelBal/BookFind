@@ -34,36 +34,18 @@ module.exports = {
       req.user = data;
     } catch {
       console.log('Invalid token');
-      return res.status(400).json({ message: 'invalid token!' });
+      // return res.status(400).json({ message: 'invalid token!' });
     }
-    var schema = buildSchema(`
-    type Query {
-      ip: String
-    }
-  `);
-  // Graphql Starter
-    var app = express();
-    app.use(loggingMiddleware);
-    app.use('/graphql', graphqlHTTP({
-      schema: schema,
-      rootValue: root,
-      graphiql: true,
-    }));
-  // 
-    var app = express();
-    app.use(loggingMiddleware);
-    app.use('/graphql', graphqlHTTP({
-      schema: schema,
-      rootValue: root,
-      graphiql: true,
-    }));
+    
+
+
+ 
 
     // send to next endpoint
     next();
   },
   signToken: function ({ username, email, _id }) {
     const payload = { username, email, _id };
-
     return jwt.sign({ data: payload }, secret, { expiresIn: expiration });
   },
 };

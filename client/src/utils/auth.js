@@ -47,3 +47,21 @@ class AuthService {
 }
 
 export default new AuthService();
+
+
+  // Graphql Starter
+  //   var app = express();
+  //   app.use(loggingMiddleware);
+  //   app.use('/graphql', graphqlHTTP({
+  //     schema: schema,
+  //     rootValue: root,
+  //     graphiql: true,
+  //   }));
+  // // 
+  //   var app = express();
+  //   app.use(loggingMiddleware);
+  //   app.use('/graphql', graphqlHTTP({
+  //     schema: schema,
+  //     rootValue: root,
+  //     graphiql: true,
+  //   }));
