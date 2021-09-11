@@ -1,6 +1,6 @@
-var express = require('express');
-var { graphqlHTTP } = require('express-graphql');
-var { buildSchema } = require('graphql');
+// var express = require('express');
+// var { graphqlHTTP } = require('express-graphql');
+// var { buildSchema } = require('graphql');
 
 const jwt = require('jsonwebtoken');
 
@@ -25,7 +25,7 @@ module.exports = {
     }
 
     if (!token) {
-      return res.status(400).json({ message: 'You have no token!' });
+      return req;
     }
 
     // verify token and get user data out of it
@@ -33,7 +33,7 @@ module.exports = {
       const { data } = jwt.verify(token, secret, { maxAge: expiration });
       req.user = data;
     } catch {
-      console.log('Invalid token');
+      return res.status(400).json({ message: 'invalid token' });
       // return res.status(400).json({ message: 'invalid token!' });
     }
     
