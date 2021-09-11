@@ -13,9 +13,20 @@ export const QUERY_ME = gql`
         description
         title
         image
-        lingk
+        link
       }
     }
   }
 `;
 
+export const QUERY_MATCHUPS = gql`
+query matchups(_id: String) {
+  matchups(id: $_id) {
+    _id
+    tech1
+    tech2
+    tech1_votes
+    tech2_votes
+  }
+}
+`;
